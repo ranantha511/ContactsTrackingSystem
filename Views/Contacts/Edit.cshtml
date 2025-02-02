@@ -1,0 +1,48 @@
+﻿@model ContactViewModel
+@{
+    ViewData["Title"] = "Edit Contact details";
+}
+@* <h2>Edit Contact</h2> *@
+<div class="p-4 container">
+    <div class="row p-4">
+        <div class="col-md-12">
+            <h3>Edit Contact details</h3>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-md-6">
+            <form asp-action="Edit" asp-controller="Contacts" method="post">
+                <input hidden asp-for="ContactId" />
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label fw-bold">First Name</label>
+                    <input asp-for="FirstName" type="text" class="form-control">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label fw-bold">Last Name</label>
+                    <input asp-for="LastName" type="text" class="form-control">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="EmailAddress" class="form-label fw-bold">Email Address</label>
+                    <input asp-for="EmailAddress" type="email" class="form-control">
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                    <input asp-for="PhoneNumber" type="text" class="form-control">
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="ZipCode" class="form-label fw-bold">Residential ZipCode</label>
+                    <input asp-for="ZipCode" type="text" class="form-control" />
+                    <span asp-validation-for="ZipCode" class="text-danger"></span>  
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.1/jquery.validate.min.js" integrity="sha512-3YmIbcnlj47HgW2BQGRbLVbzReKt4cASLxa3Z8QY9rohHbqLsuKeccNqFD2wNMfATqYcHCVxGKh5T/7tCWFIRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
